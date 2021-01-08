@@ -174,6 +174,8 @@
 		cursor: pointer;
 		z-index: 5;
 		bottom: -45px;
+		outline: none;
+
 		svg {
 			stroke: #000000;
 		}
@@ -195,16 +197,58 @@
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		padding-left: 25px;
 	}
 
 	&__item {
 		margin-bottom: 100px;
 		display: flex;
 		align-items: flex-end;
+		&:nth-child(even) {
+			margin-left: 50px;
+			transform: translateY(25px);
+		}
+	}
+
+	&__item-1,
+	&__item-3 {
+		position: relative;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
 	}
 
 	&__item-1 {
+		&::before {
+			height: 45px;
+			width: 245px;
+			background-image: url("../img/icons/line-1.svg");
+			right: -64px;
+			top: 31px;
+		}
+	}
+
+	&__item-3 {
+		&::before {
+			background-image: url("../img/icons/line-3.svg");
+			width: 254px;
+			height: 39px;
+			top: 44px;
+			right: -74px;
+		}
+
+		&::after {
+			background-image: url("../img/icons/line-2.svg");
+			width: 464px;
+			height: 62px;
+			top: -64px;
+			right: -56px;
+		}
 	}
 
 	&__num {
@@ -246,6 +290,10 @@
 		font-size: 15px;
 		line-height: 18px;
 	}
+}
+
+.footer {
+	display: none;
 }
 
 @import "media";
