@@ -197,7 +197,12 @@
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
-		padding-left: 25px;
+		padding-left: 50px;
+	}
+
+	&__item--center {
+		margin-right: -15px;
+		margin-left: -15px;
 	}
 
 	&__item {
@@ -307,6 +312,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding-left: 55px;
 	}
 
 	&__item {
@@ -371,6 +377,34 @@
 		font-weight: 300;
 		font-size: 15px;
 		line-height: 18px;
+	}
+}
+
+//questions
+
+.questions {
+	&__items {
+		max-width: 757px;
+		padding-left: 30px;
+	}
+
+	&__item {
+		background-color: rgba(0, 0, 0, 0.3);
+		max-width: 690px;
+	}
+
+	&__item-title {
+		@extend %ubuntu-medium;
+		font-size: 21px;
+		line-height: 28px;
+		color: rgba(#fff, 0.8);
+		padding: 20px 10px 24px 40px;
+	}
+
+	&__item-text {
+		@extend %ubuntu-light;
+		font-size: 15px;
+		line-height: 150%;
 	}
 }
 
