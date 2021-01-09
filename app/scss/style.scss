@@ -208,46 +208,54 @@
 			margin-left: 50px;
 			transform: translateY(25px);
 		}
-	}
 
-	&__item-1,
-	&__item-3 {
-		position: relative;
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			background-repeat: no-repeat;
-			background-position: 0 0;
-		}
-	}
-
-	&__item-1 {
-		&::before {
-			height: 45px;
-			width: 245px;
-			background-image: url("../img/icons/line-1.svg");
-			right: -64px;
-			top: 31px;
-		}
-	}
-
-	&__item-3 {
-		&::before {
-			background-image: url("../img/icons/line-3.svg");
-			width: 254px;
-			height: 39px;
-			top: 44px;
-			right: -74px;
+		&:nth-child(3) {
+			margin-left: 25px;
 		}
 
-		&::after {
-			background-image: url("../img/icons/line-2.svg");
-			width: 464px;
-			height: 62px;
-			top: -64px;
-			right: -56px;
+		&:nth-child(4) {
+			margin-left: 60px;
+		}
+		&:first-child,
+		&:nth-child(3) {
+			position: relative;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: cover;
+			}
+		}
+
+		&:first-child {
+			&::before {
+				height: 50px;
+				width: 245px;
+				background-image: url("../img/icons/line/line-1.svg");
+				right: -64px;
+				top: 31px;
+			}
+		}
+
+		&:nth-child(3) {
+			&::before {
+				background-image: url("../img/icons/line/line-3.svg");
+				width: 254px;
+				height: 43px;
+				top: 44px;
+				right: -74px;
+			}
+
+			&::after {
+				background-image: url("../img/icons/line/line-2.svg");
+				width: 464px;
+				height: 62px;
+				top: -64px;
+				right: -48px;
+			}
 		}
 	}
 
@@ -287,6 +295,80 @@
 	}
 
 	&__info-text {
+		font-size: 15px;
+		line-height: 18px;
+	}
+}
+
+//specification
+
+.specification {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+	}
+
+	&__box {
+		width: 280px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			background-size: contain;
+		}
+	}
+
+	&__box-2 {
+		margin-top: 140px;
+	}
+	&__box-4 {
+		margin-top: 160px;
+	}
+
+	&__box-1::before {
+		background-image: url("../img/icons/pointer/pointer-1.svg");
+		width: 227px;
+		height: 116px;
+		right: -117px;
+		top: 17px;
+	}
+	&__box-2::before {
+		background-image: url("../img/icons/pointer/pointer-2.svg");
+		width: 380px;
+		height: 86px;
+		right: -329px;
+		top: -68px;
+	}
+	&__box-3::before {
+		background-image: url("../img/icons/pointer/pointer-3.svg");
+		width: 255px;
+		height: 105px;
+		left: -280px;
+		top: 15px;
+	}
+	&__box-4::before {
+		background-image: url("../img/icons/pointer/pointer-4.svg");
+		width: 123px;
+		height: 90px;
+		left: -140px;
+		top: -75px;
+	}
+	&__box-title {
+		@extend %ubuntu-bold;
+		font-size: 21px;
+		line-height: 28px;
+		margin-bottom: 10px;
+	}
+
+	&__box-text {
+		font-weight: 300;
 		font-size: 15px;
 		line-height: 18px;
 	}
